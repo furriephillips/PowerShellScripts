@@ -29,12 +29,12 @@ While($true) {
     }
 
     $SleepyTime = Write-Output "$interval"
-    Write-Host "`nSleeping for $SleepyTime minutes: " -nonewline -foregroundcolor Magenta
+    Write-Host "`nSleeping for $SleepyTime minutes..." -nonewline -foregroundcolor Magenta
     $SleepyMins = 1..$SleepyTime
     $Mins = 0
     Foreach ($Min in $SleepyMins) {
         $Mins++
         Start-Sleep -s 60
-        Write-Host "`rSleeping for $SleepyTime minutes: $Mins" -nonewline -foregroundcolor Magenta
+        Write-Host "`rSleeping for $SleepyTime minutes... $Mins mins elapsed" -nonewline -foregroundcolor Magenta
     }
 }
